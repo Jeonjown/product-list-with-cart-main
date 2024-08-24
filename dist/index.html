@@ -3,14 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/main.css" rel="stylesheet" />
     <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <h1 class="font-bold text-red-700">Hello world!</h1>
-    <h2 class="bg-black italic text-blue-700">HI</h2>
-    <div
-      class="ml-4 flex h-24 border-2 border-gray-300 p-3 text-gray-700 shadow-md"
-    ></div>
+  <body class="flex w-full bg-white p-8 flex-col lg:flex-row">
+    <div class="product flex-auto">
+      <h1 class="text-4xl font-black text-gray-950 mb-6">Desserts</h1>
+      <div class="menu grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="product">
+          <div class="img relative w-fit">
+            <img src="../assets/images/image-waffle-mobile.jpg" alt="Waffle with Berries mobile" class="w-full block lg:hidden rounded-lg"></img>
+            <img src="../assets/images/image-waffle-desktop.jpg" alt="Waffle with Berries desktop" class="w-full lg:block hidden max-w-sm  rounded-lg"></img>
+            <button class="flex gap-1 absolute -bottom-5 border-[.1px] bg-white border-rose-950 rounded-full p-2 px-6 left-1/2 -translate-x-1/2">
+              <img src="../assets/images/icon-add-to-cart.svg" alt="Add to Cart icon">
+              <div class="button-text font-bold text-base text-nowrap">Add to Cart</div>
+            </button>
+          </div>
+          <div class="text mt-9 mb-9">
+            <div class="text-gray-500">Waffle</div>
+            <div class="font-semibold text-red-950">Waffle with Berries</div>
+            <div class="font-semibold text-red-500">&#36;6.50</div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="img relative w-fit">
+            <img src="../assets/images/image-waffle-mobile.jpg" alt="Waffle with Berries mobile" class="w-full block lg:hidden rounded-lg"></img>
+            <img src="../assets/images/image-waffle-desktop.jpg" alt="Waffle with Berries desktop" class="w-full lg:block hidden max-w-sm  rounded-lg"></img>
+            <button class="flex gap-1 absolute -bottom-5 border-[.1px] bg-white border-rose-950 rounded-full p-2 px-6 left-1/2 -translate-x-1/2">
+              <img src="../assets/images/icon-add-to-cart.svg" alt="Add to Cart icon">
+              <div class="button-text font-bold text-base text-nowrap">Add to Cart</div>
+            </button>
+          </div>
+          <div class="text mt-9 mb-9">
+            <div class="text-gray-500">Waffle</div>
+            <div class="font-semibold text-red-950">Waffle with Berries</div>
+            <div class="font-semibold text-red-500">&#36;6.50</div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="img relative w-fit">
+            <img src="../assets/images/image-waffle-mobile.jpg" alt="Waffle with Berries mobile" class="w-full block lg:hidden rounded-lg"></img>
+            <img src="../assets/images/image-waffle-desktop.jpg" alt="Waffle with Berries desktop" class="w-full lg:block hidden max-w-sm  rounded-lg"></img>
+            <button class="flex gap-1 absolute -bottom-5 border-[.1px] bg-white border-rose-950 rounded-full p-2 px-6 left-1/2 -translate-x-1/2">
+              <img src="../assets/images/icon-add-to-cart.svg" alt="Add to Cart icon">
+              <div class="button-text font-bold text-base text-nowrap">Add to Cart</div>
+            </button>
+          </div>
+          <div class="text mt-9 mb-9">
+            <div class="text-gray-500">Waffle</div>
+            <div class="font-semibold text-red-950">Waffle with Berries</div>
+            <div class="font-semibold text-red-500">&#36;6.50</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cart flex-initial bg-pink-400 w-80">YOUR Cart</div>
   </body>
 </html>
