@@ -1,14 +1,15 @@
-fetch('../data.json')
-  .then((response) => response.json())
-  .then((data) => {
-    const jsonData = data;
-    const container = document.getElementById('product-container');
+export let fetchProducts = () => {
+  fetch('../data.json')
+    .then((response) => response.json())
+    .then((data) => {
+      const jsonData = data;
+      const container = document.getElementById('product-container');
 
-    jsonData.forEach((item, index) => {
-      const product = document.createElement('div');
-      product.className = 'product';
+      jsonData.forEach((item) => {
+        const product = document.createElement('div');
+        product.className = 'product';
 
-      product.innerHTML = `
+        product.innerHTML = `
       <div class="img relative w-fit">
             <img
               src=${item.image.mobile}
@@ -38,7 +39,8 @@ fetch('../data.json')
             <div class="font-semibold text-accent">&#36;${item.price}</div>
           </div>
           `;
-      container.appendChild(product);
-    });
-  })
-  .catch((error) => console.error('Error loading JSON:', error));
+        container.append(product);
+      });
+    })
+    .catch((error) => console.error('Error loading JSON:', error));
+};
