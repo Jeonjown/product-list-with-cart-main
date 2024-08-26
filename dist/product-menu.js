@@ -11,17 +11,17 @@ fetch('../data.json')
       product.innerHTML = `
       <div class="img relative w-fit">
             <img
-              src=${jsonData[index].image.mobile}
-              alt=${jsonData[index].name}
+              src=${item.image.mobile}
+              alt=${item.name}
               class="block w-full rounded-lg lg:hidden"
             />
             <img
-              src=${jsonData[index].image.desktop}
-              alt=${jsonData[index].name}
+              src=${item.image.desktop}
+              alt=${item.name}
               class="hidden w-full max-w-sm rounded-lg lg:block"
             />
             <button
-              class="absolute -bottom-5 left-1/2 justify-center text-nowrap flex -translate-x-1/2 gap-1 rounded-full border-[.1px] border-rose-950 bg-white p-2 px-6"
+              class="absolute -bottom-5 left-1/2 justify-center text-nowrap flex -translate-x-1/2 gap-1 rounded-full border-[.1px] border-rose-950 bg-white p-2 px-6 hover:border-accent hover:text-accent"
             >
               <img
                 src="../assets/images/icon-add-to-cart.svg"
@@ -33,9 +33,9 @@ fetch('../data.json')
             </button>
           </div>
           <div class="text mb-9 mt-9">
-            <div class="text-gray-500">${jsonData[index].category}</div>
-            <div class="font-semibold text-red-950">${jsonData[index].name}</div>
-            <div class="font-semibold text-red-500">&#36;${jsonData[index].price}</div>
+            <div class="text-gray-500">${item.category}</div>
+            <div class="font-semibold text-red-950">${item.name}</div>
+            <div class="font-semibold text-accent">&#36;${item.price}</div>
           </div>
           `;
       container.appendChild(product);
