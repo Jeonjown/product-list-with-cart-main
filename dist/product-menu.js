@@ -15,12 +15,12 @@ export function fetchProducts() {
             <img
               src="${item.image.mobile}"
               alt="${item.name}"
-              class="block w-full rounded-lg lg:hidden"
+              class="mobile block w-full rounded-lg lg:hidden border-4 border-white"
             />
             <img
               src="${item.image.desktop}"
               alt="${item.name}"
-              class="hidden w-full max-w-sm rounded-lg lg:block"
+              class="desktop hidden w-full max-w-sm rounded-lg lg:block border-4 border-white"
             />
             <div class="button-text" data-product-id="${index}">  
               <button
